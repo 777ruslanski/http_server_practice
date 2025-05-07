@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTTP Server with CRUD and File Upload</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CRUD API + File Upload</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Create Resource</h2>
+      <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/resources">
+        <label>Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Value:</label>
+        <input type="text" name="value" required />
+
+        <label>Image (PNG/JPG):</label>
+        <input type="file" name="file" accept="image/png, image/jpeg" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="response">
+      <h2>Response</h2>
+      <pre id="output">Waiting for request...</pre>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery of Resources</h2>
+      <div id="galleryGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const output = document.getElementById('output');
+    const gallery = document.getElementById('galleryGrid');
+
+    async function refreshGallery() {
+      const res = await fetch('/resources');
+      const data = await res.json();
+
+      gallery.innerHTML = ''; // Clear gallery
+
+      for (const [id, resource] of Object.entries(data)) {
+        const item = document.createElement('div');
+        item.classList.add('card');
+
+        item.innerHTML = `
+          <h3>${resource.name}</h3>
+          <p>Value: ${resource.value}</p>
+          ${resource.image ? `<img src="${resource.image}" alt="image" />` : ''}
+        `;
+        gallery.appendChild(item);
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      try {
+        const res = await fetch('/resources', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        output.textContent = JSON.stringify(data, null, 2);
+        await refreshGallery();
+        form.reset();
+      } catch (err) {
+        output.textContent = "Error: " + err.message;
+      }
+    });
+
+    refreshGallery();
+  </script>
+</body>
+</html>
