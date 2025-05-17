@@ -113,35 +113,3 @@ Add database support for persistent resource storage.
 Implement HTTPS and authentication mechanisms.
 
 Add advanced file validation (e.g., check file size and type before accepting uploads).
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact
-For any inquiries or feedback, feel free to contact me at [your-email@example.com].
-
-pgsql
-Copiar
-Editar
-
----
-
-### **Explanation of Sections**:
-
-1. **Overview**: Describes the main functionalities and purpose of the project.
-2. **Features**: A list of features for both the server and client.
-3. **Project Structure**: A simple directory structure to explain the organization of files.
-4. **Setup and Installation**: Step-by-step instructions for setting up the project, including prerequisites and installation steps.
-5. **Usage**: Instructions on how to use the HTTP server and client, with examples.
-6. **Testing**: How the project was tested and some example requests for `curl`.
-7. **Screenshots**: You can include images like the one you uploaded to show the project in action.
-8. **Challenges and Solutions**: Mention any specific challenges faced during development and how they were resolved.
-9. **Future Improvements**: Outline possible improvements for future versions of the project.
-10. **License**: Include a simple license statement (e.g., MIT License) for open-source projects.
-11. **Contact**: Provide your email for people to contact you.
-
----
-
-This `README.md` is designed to be both informative and easy to follow, giving anyone visiting your GitHub project a clear understanding of its purpose, how to set it up, and how to use it.
-
-Feel free to modify it based on your needs! Let me know if you need further changes.
