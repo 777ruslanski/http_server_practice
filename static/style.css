@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #logo {
+    width: 150px;  /* Ajusta el tamaño del logo */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="file"],
+  form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }
+  
+  form button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .response {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 30px;
+    font-family: monospace;
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+  }
+  
+  .gallery {
+    margin-top: 40px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
