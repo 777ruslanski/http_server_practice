@@ -22,9 +22,9 @@ A basic HTTP server implementation in [Python/Node.js/Other] for learning web se
    git clone https://github.com/777ruslanski/http_server_practice.git
    cd http_server_practice
 Install dependencies (if applicable):
-
+```
 [pip install -r requirements.txt / npm install / etc.]
-
+```
 ## Usage
 Start the server:
 
