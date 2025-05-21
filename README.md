@@ -55,17 +55,18 @@ GET /[filename] - Serves requested static file
 POST /data - Example POST endpoint
 
 Request Body:
+```
 {
   "key": "value"
 }
-
+```
 ## Examples
 Making Requests
-
+```
 curl http://localhost:8000/
 
 curl -X POST -H "Content-Type: application/json" -d '{"key":"value"}' http://localhost:8000/data
-
+```
 ## Contributing
 Contributions are welcome! Please follow these steps:
 
