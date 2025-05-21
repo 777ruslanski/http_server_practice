@@ -35,6 +35,7 @@ http://localhost:[PORT]/
 Default port is usually 8000 or 8080.
 
 ## Project Structure
+```
 http_server_practice/
 ├── server.py                # Main server implementation
 ├── public/                  # Static files directory
@@ -43,6 +44,7 @@ http_server_practice/
 │   └── ...
 ├── README.md
 └── [Other relevant files]
+```
 
 ## API Reference (if applicable)
 Endpoints
